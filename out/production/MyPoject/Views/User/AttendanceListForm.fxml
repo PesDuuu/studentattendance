@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="acpScene" prefHeight="920.0" prefWidth="765.0" style="-fx-border-width: 3; -fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.User.AttendanceListController">
+   <children>
+      <TableView fx:id="tbvAttendanceList" layoutX="14.0" layoutY="160.0" prefHeight="746.0" prefWidth="740.0">
+        <columns>
+            <TableColumn fx:id="colStudentCode" prefWidth="87.0" text="MSSV" />
+            <TableColumn fx:id="colFirstName" prefWidth="139.0" text="Họ" />
+            <TableColumn fx:id="colLastName" prefWidth="71.0" text="Tên" />
+            <TableColumn fx:id="col1" minWidth="12.0" prefWidth="22.0" text="1" />
+            <TableColumn fx:id="col2" prefWidth="22.0" text="2" />
+            <TableColumn fx:id="col3" prefWidth="22.0" text="3" />
+            <TableColumn fx:id="col4" prefWidth="22.0" text="4" />
+            <TableColumn fx:id="col5" prefWidth="22.0" text="5" />
+            <TableColumn fx:id="col6" prefWidth="22.0" text="6" />
+            <TableColumn fx:id="col7" prefWidth="22.0" text="7" />
+            <TableColumn fx:id="col8" prefWidth="22.0" text="8" />
+            <TableColumn fx:id="col9" prefWidth="22.0" text="9" />
+            <TableColumn fx:id="col10" prefWidth="22.0" text="10" />
+            <TableColumn fx:id="col11" prefWidth="22.0" text="11" />
+            <TableColumn fx:id="col12" prefWidth="22.0" text="12" />
+            <TableColumn fx:id="col13" prefWidth="22.0" text="13" />
+            <TableColumn fx:id="col14" prefWidth="22.0" text="14" />
+            <TableColumn fx:id="col15" prefWidth="22.0" text="15" />
+            <TableColumn fx:id="col16" prefWidth="22.0" text="16" />
+            <TableColumn fx:id="col17" prefWidth="22.0" text="17" />
+            <TableColumn fx:id="col18" prefWidth="22.0" text="18" />
+            <TableColumn fx:id="col19" prefWidth="22.0" text="19" />
+            <TableColumn fx:id="col20" prefWidth="22.0" text="20" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="62.0" text="Mã lớp :" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="83.0" text="Tên môn học:" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="105.0" text="Ngày tạo:" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="128.0" text="Tên giảng viên:" underline="true">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblClassroomId" layoutX="81.0" layoutY="62.0" text="Mã lớp :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblClassroomName" layoutX="122.0" layoutY="83.0" text="Mã lớp :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCreateDate" layoutX="93.0" layoutY="105.0" text="Mã lớp :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTeacherName" layoutX="139.0" layoutY="128.0" text="Mã lớp :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitle" layoutX="231.0" layoutY="23.0" text="Danh sách điểm danh">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnExportPDF" layoutX="682.0" layoutY="104.0" onMouseClicked="#saveToPDF" prefHeight="48.0" prefWidth="54.0" text=" ">
+         <graphic>
+            <ImageView fx:id="imgExportPDF" fitHeight="40.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnExportExcel" layoutX="608.0" layoutY="102.0" onMouseClicked="#saveToExcel" prefHeight="48.0" prefWidth="54.0" text=" ">
+         <graphic>
+            <ImageView fx:id="imgExportExcel" fitHeight="40.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="596.0" layoutY="85.0" text="Xuất file Excel" />
+      <Label layoutX="680.0" layoutY="85.0" text="Xuất file PDF" />
+      <JFXButton fx:id="btnCancel" layoutX="682.0" layoutY="22.0" onMouseClicked="#CloseForm" prefHeight="48.0" prefWidth="54.0" text=" ">
+         <graphic>
+            <ImageView fx:id="imgBack" fitHeight="40.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

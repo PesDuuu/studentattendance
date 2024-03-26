@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="229.0" prefWidth="475.0" style="-fx-background-radius: 30;" styleClass="AnchorPane" stylesheets="@../../CSS/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Alert.alertSuccessfulController">
+   <children>
+      <JFXButton fx:id="btnOK" layoutX="218.0" layoutY="177.0" onMouseClicked="#OK" styleClass="busy2" stylesheets="@../../CSS/stylesheet.css" text="OK" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="15.0" />
+         </font></JFXButton>
+      <ImageView fx:id="imgSuccessful" fitHeight="100.0" fitWidth="100.0" layoutX="192.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblTittle" alignment="CENTER" layoutX="3.0" layoutY="121.0" prefHeight="37.0" prefWidth="468.0" text="Thành công!">
+         <font>
+            <Font name="Tahoma" size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

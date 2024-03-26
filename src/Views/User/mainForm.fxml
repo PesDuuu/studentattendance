@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="1100.0" style="-fx-border-color: black; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.User.mainFormController">
+   <top>
+      <AnchorPane prefHeight="111.0" prefWidth="870.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblHello" layoutX="51.0" layoutY="8.0" prefHeight="46.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Pane layoutY="97.0" prefHeight="14.0" prefWidth="1094.0" style="-fx-background-color: #757575;" />
+            <Label fx:id="lblHello1" layoutX="14.0" layoutY="51.0" prefHeight="46.0" prefWidth="311.0" text="DANH SÁCH LỚP">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnLogout" alignment="BASELINE_LEFT" graphicTextGap="20.0" layoutX="896.0" layoutY="31.0" onMouseClicked="#Logout" prefHeight="19.0" prefWidth="190.0" style="-fx-border-color: #aeea00;" styleClass="addBobOk" stylesheets="@../../CSS/stylesheet.css" text="Đăng xuất">
+               <graphic>
+                  <ImageView fx:id="imgLogout" fitHeight="39.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </JFXButton>
+            <Button fx:id="btnChangePassword" layoutX="3.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#openChangePasswordForm" prefHeight="44.0" prefWidth="52.0">
+               <graphic>
+                  <ImageView fx:id="imgChangePassword" fitHeight="38.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <FlowPane fx:id="flpMainForm" prefHeight="651.0" prefWidth="1100.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.loginController">
+   <left>
+      <AnchorPane prefHeight="351.0" prefWidth="121.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="brandingImageView" fitHeight="351.0" fitWidth="235.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+<!--               <image>-->
+<!--                  <Image url="@../../resources/images/background-ui.jpg" />-->
+<!--               </image>-->
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="332.0" style="-fx-background-color: #110438;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblLoginMessage" alignment="CENTER" layoutX="32.0" layoutY="204.0" prefHeight="19.0" prefWidth="231.0" textFill="#ee6060">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="199.0" layoutY="322.0" prefHeight="16.0" prefWidth="80.0" text="Phiên bản: 1.0.0" textFill="#eee7e7">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="lockImageView" fitHeight="43.0" fitWidth="84.0" layoutX="129.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="67.0" layoutY="46.0" prefHeight="35.0" prefWidth="154.0" text="Đăng nhập">
+               <font>
+                  <Font name="Tahoma Bold" size="28.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5340909090909092" centerY="0.5533980582524272" radius="0.6">
+                     <stops>
+                        <Stop color="#bc8224" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <JFXTextField fx:id="txtUsername" focusColor="#2dbf16" labelFloat="true" layoutX="87.0" layoutY="110.0" onAction="#onEnter" prefHeight="31.0" prefWidth="178.0" promptText="Tên đăng nhập:" stylesheets="@../CSS/stylesheet.css" text="admin" unFocusColor="#c5cae9" />
+            <JFXPasswordField fx:id="txtPassword" focusColor="#46da25" labelFloat="true" layoutX="89.0" layoutY="165.0" onAction="#onEnter" prefHeight="31.0" prefWidth="178.0" promptText="Mật khẩu:" stylesheets="@../CSS/stylesheet.css" text="admin" unFocusColor="#c5cae9" />
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="29.0" layoutY="246.0" onAction="#loginButtonOnAction" prefHeight="31.0" prefWidth="235.0" style="-fx-background-radius: 90;" styleClass="busy" stylesheets="@../CSS/stylesheet.css" text="Đăng nhập" textFill="#ffffff9c">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="28.0" layoutY="289.0" onAction="#cancelButtonOnAction" prefHeight="19.0" prefWidth="235.0" style="-fx-background-color: #fdd835; -fx-background-radius: 90;" text="Thoát" />
+            <ImageView fx:id="iconUser" fitHeight="33.0" fitWidth="57.0" layoutX="52.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="iconPass" fitHeight="71.0" fitWidth="79.0" layoutX="33.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true" />
+
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

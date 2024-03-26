@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.accountController">
+   <center>
+      <TableView fx:id="TableVAccount" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../CSS/stylesheet.css" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="116.0" text="Mã Tài Khoản" />
+          <TableColumn fx:id="colName" prefWidth="104.0" text="Tên Tài Khoản" />
+            <TableColumn fx:id="colPassword" minWidth="5.0" prefWidth="117.0" text="Mật Khẩu" visible="false" />
+            <TableColumn fx:id="colTeacherCode" prefWidth="75.0" text="Mã giảng viên" />
+            <TableColumn fx:id="colType" prefWidth="45.0" text="Loại " />
+            <TableColumn fx:id="colButton" prefWidth="69.0" text="Cập Nhật" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <HBox prefHeight="86.0" prefWidth="920.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnAdd" onMouseClicked="#getAddView" prefHeight="64.0" prefWidth="64.0" styleClass="busy1" stylesheets="@../../CSS/stylesheet.css">
+               <graphic>
+                  <ImageView fx:id="imgVAdd" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnReload" onMouseClicked="#reFresh" prefHeight="64.0" prefWidth="64.0" styleClass="busy1" stylesheets="@../../CSS/stylesheet.css">
+               <graphic>
+                  <ImageView fx:id="imgVReload" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <AnchorPane prefHeight="86.0" prefWidth="630.0" style="-fx-border-color: #212121;">
+               <children>
+                  <JFXTextField fx:id="txtUsername" layoutX="18.0" layoutY="43.0" prefHeight="31.0" prefWidth="172.0" promptText="Tên tài khoản" styleClass="jfx-text-field1" stylesheets="@../../CSS/stylesheet.css" />
+                  <JFXTextField fx:id="txtCode" layoutX="243.0" layoutY="43.0" prefHeight="31.0" prefWidth="166.0" promptText="Mã giảng viên" styleClass="jfx-text-field1" stylesheets="@../../CSS/stylesheet.css" />
+                  <JFXComboBox fx:id="cbbType" layoutX="482.0" layoutY="43.0" onHiding="#getAccountType" prefHeight="31.0" prefWidth="133.0" promptText="Loại" styleClass="combo-box1" stylesheets="@../../CSS/stylesheet.css" />
+                  <Pane layoutY="30.0" prefHeight="5.0" prefWidth="630.0" style="-fx-background-color: #212121;" />
+                  <Label layoutX="6.0" layoutY="1.0" prefHeight="30.0" prefWidth="138.0" text="TÌM KIẾM:" textFill="#212121">
+                     <font>
+                        <Font name="Tahoma Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="30.0" />
+         </padding>
+      </HBox>
+   </top>
+</BorderPane>

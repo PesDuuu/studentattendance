@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #2B2E33;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.addClassroomController">
+   <children>
+      <JFXTextField fx:id="txtClassroomID" disable="true" labelFloat="true" layoutX="173.0" layoutY="163.0" prefHeight="31.0" prefWidth="230.0" promptText="Mã phòng:" stylesheets="@../../CSS/stylesheet.css" />
+      <JFXTextField fx:id="txtClassroomName" labelFloat="true" layoutX="171.0" layoutY="225.0" prefHeight="31.0" prefWidth="230.0" promptText="Tên phòng:" stylesheets="@../../CSS/stylesheet.css" />
+      <AnchorPane prefHeight="100.0" prefWidth="600.0" />
+      <JFXButton fx:id="btnSave" layoutY="543.0" onMouseClicked="#Save" prefHeight="58.0" prefWidth="300.0" styleClass="busy3" stylesheets="@../../CSS/stylesheet.css" text="Lưu" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClose" layoutX="300.0" layoutY="543.0" onMouseClicked="#Close" prefHeight="58.0" prefWidth="300.0" styleClass="busy3" stylesheets="@../../CSS/stylesheet.css" text="Hủy" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker fx:id="dpCreate" layoutX="172.0" layoutY="292.0" prefHeight="31.0" prefWidth="230.0" promptText="Ngày tạo" stylesheets="@../../CSS/stylesheet.css" />
+      <JFXComboBox fx:id="cbbTeacherCode" labelFloat="true" layoutX="175.0" layoutY="371.0" prefHeight="31.0" prefWidth="230.0" promptText="Mã giảng viên" styleClass="jfx-text-field" stylesheets="@../../CSS/stylesheet.css" />
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #303642;">
+         <children>
+            <Text fill="#e1dfdf" layoutX="157.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tạo Phòng Học" wrappingWidth="285.6708984375">
+               <font>
+                  <Font name="Tahoma" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

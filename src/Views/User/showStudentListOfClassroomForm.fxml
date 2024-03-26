@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="532.0" prefWidth="486.0" style="-fx-border-color: #708090; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.User.ShowStudentListOfClassroomController">
+   <children>
+      <Label layoutX="12.0" layoutY="6.0" text="Danh sách sinh viên" textFill="#070707">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvStudentList" layoutX="12.0" layoutY="39.0" prefHeight="484.0" prefWidth="464.0">
+        <columns>
+          <TableColumn fx:id="colStudentCode" prefWidth="75.0" text="Mã sinh viên" />
+          <TableColumn fx:id="colFullName" prefWidth="75.0" text="Tên sinh viên" />
+            <TableColumn fx:id="colInfo" prefWidth="75.0" text="Thông tin" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCancel" layoutX="430.0" layoutY="7.0" mnemonicParsing="false" onMouseClicked="#CloseForm" text="Đóng" />
+   </children>
+</AnchorPane>

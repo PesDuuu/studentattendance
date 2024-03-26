@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #2B2E33;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.editClassroomController">
+   <children>
+      <JFXTextField fx:id="txtClassroomID" disable="true" labelFloat="true" layoutX="183.0" layoutY="163.0" prefHeight="31.0" prefWidth="230.0" promptText="Mã phòng:" stylesheets="@../../CSS/stylesheet.css" />
+      <JFXTextField fx:id="txtClassroomName" labelFloat="true" layoutX="183.0" layoutY="226.0" prefHeight="31.0" prefWidth="230.0" promptText="Tên phòng:" stylesheets="@../../CSS/stylesheet.css" />
+      <AnchorPane prefHeight="100.0" prefWidth="600.0" style="-fx-background-color: #303642;">
+         <children>
+            <Text fill="WHITE" layoutX="113.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cập Nhật Phòng Học" wrappingWidth="374.6708984375">
+               <font>
+                  <Font name="Tahoma" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnSave" layoutY="543.0" onMouseClicked="#Save" prefHeight="58.0" prefWidth="300.0" styleClass="busy3" stylesheets="@../../CSS/stylesheet.css" text="Lưu" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnClose" layoutX="300.0" layoutY="543.0" onMouseClicked="#Close" prefHeight="58.0" prefWidth="300.0" styleClass="busy3" stylesheets="@../../CSS/stylesheet.css" text="Hủy" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker fx:id="dpCreate" layoutX="183.0" layoutY="290.0" prefHeight="31.0" prefWidth="230.0" promptText="Ngày tạo" stylesheets="@../../CSS/stylesheet.css" />
+      <JFXComboBox fx:id="cbbTeacherCode" layoutX="183.0" layoutY="371.0" prefHeight="31.0" prefWidth="230.0" promptText="Mã GV" styleClass="cbb" stylesheets="@../../CSS/stylesheet.css" />
+      <Label layoutX="183.0" layoutY="350.0" prefHeight="21.0" prefWidth="98.0" text="Mã giảng viên" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="183.0" layoutY="269.0" prefHeight="21.0" prefWidth="69.0" text="Ngày tạo" textFill="WHITE">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

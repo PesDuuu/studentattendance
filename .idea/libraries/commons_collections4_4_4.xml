@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="commons-collections4-4.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../library/commons-collections4-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/fontawesomefx-8.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/jfoenix-8.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/mysql-connector-j-8.0.32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/opencv-3413.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/poi-3.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/poi-5.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/poi-ooxml-3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/poi-ooxml-3.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/poi-ooxml-schemas-3.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/xmlbeans-2.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../library/opencv-3413.jar!/" />
+    </SOURCES>
+  </library>
+</component>

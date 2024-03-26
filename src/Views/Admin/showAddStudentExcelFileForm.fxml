@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="761.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.showAddStudentExcelFileController">
+   <children>
+      <TableView fx:id="tbvStudentSuccess" layoutX="94.0" layoutY="59.0" prefHeight="180.0" prefWidth="946.0">
+        <columns>
+          <TableColumn fx:id="colSuccessID" prefWidth="94.0" text="MSSV" />
+          <TableColumn fx:id="colSuccessName" prefWidth="190.0" text="Họ Tên" />
+            <TableColumn fx:id="colSuccessDate" prefWidth="178.0" text="Ngày sinh" />
+            <TableColumn fx:id="colSuccessAddress" minWidth="0.0" prefWidth="307.0" text="Địa chỉ" />
+            <TableColumn fx:id="colSuccessClassCode" prefWidth="176.0" text="Mã lớp" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tbvStudentExist" layoutX="94.0" layoutY="282.0" prefHeight="180.0" prefWidth="946.0">
+        <columns>
+          <TableColumn fx:id="colExistID" prefWidth="99.0" text="MSSV" />
+          <TableColumn fx:id="colExistName" prefWidth="183.0" text="Họ Tên" />
+            <TableColumn fx:id="colExistDate" prefWidth="177.0" text="Ngày sinh" />
+            <TableColumn fx:id="colExistAddress" prefWidth="312.0" text="Địa chỉ" />
+            <TableColumn fx:id="colExistClassCode" prefWidth="176.0" text="Mã lớp" />
+        </columns>
+      </TableView>
+      <Label layoutX="94.0" layoutY="26.0" prefHeight="33.0" prefWidth="263.0" text="DANH SÁCH THÊM THÀNH CÔNG">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="249.0" prefHeight="33.0" prefWidth="346.0" text="DANH SÁCH SINH VIÊN ĐÃ TỒN TẠI">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="475.0" prefHeight="33.0" prefWidth="263.0" text="DANH SÁCH THÊM BỊ LỖI">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvStudentError" layoutX="94.0" layoutY="508.0" prefHeight="180.0" prefWidth="946.0">
+        <columns>
+            <TableColumn fx:id="colErrorID" prefWidth="449.0" text="MSSV" />
+            <TableColumn fx:id="colErrorName" prefWidth="496.0" text="Không hợp lệ" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnBack" layoutX="483.0" layoutY="697.0" onMouseClicked="#Back" prefHeight="50.0" prefWidth="134.0" styleClass="busy3" stylesheets="@../../CSS/stylesheet.css" text="Trở về" textFill="WHITE">
+         <graphic>
+            <ImageView fx:id="imgBack" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="679.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Admin.facultyController">
+   <top>
+      <HBox prefHeight="86.0" prefWidth="190.0" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btnAdd" onMouseClicked="#getAddView" prefHeight="64.0" prefWidth="64.0" styleClass="busy1" stylesheets="@../../CSS/stylesheet.css">
+               <graphic>
+                  <ImageView fx:id="imgVAdd" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="5.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnExcel" onMouseClicked="#openFile" prefHeight="50.0" prefWidth="54.0" styleClass="busy1" stylesheets="@../../CSS/stylesheet.css">
+               <graphic>
+                  <ImageView fx:id="imgExcel" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="btnReload" onAction="#reFresh" prefHeight="64.0" prefWidth="64.0" styleClass="busy1" stylesheets="@../../CSS/stylesheet.css">
+               <graphic>
+                  <ImageView fx:id="imgVReload" accessibleRole="BUTTON" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <HBox.margin>
+                  <Insets bottom="20.0" left="5.0" right="10.0" top="20.0" />
+               </HBox.margin>
+            </JFXButton>
+            <AnchorPane prefHeight="86.0" prefWidth="630.0" style="-fx-border-color: #212121;">
+               <children>
+                  <JFXTextField fx:id="txtCode" layoutX="182.0" layoutY="43.0" prefHeight="31.0" prefWidth="172.0" promptText="Mã khoa" styleClass="jfx-text-field1" stylesheets="@../../CSS/stylesheet.css" />
+                  <JFXTextField fx:id="txtName" layoutX="437.0" layoutY="43.0" prefHeight="31.0" prefWidth="166.0" promptText="Tên khoa" styleClass="jfx-text-field1" stylesheets="@../../CSS/stylesheet.css" />
+                  <Pane layoutY="30.0" prefHeight="5.0" prefWidth="630.0" style="-fx-background-color: #212121;" />
+                  <Label layoutX="6.0" layoutY="1.0" prefHeight="30.0" prefWidth="138.0" text="TÌM KIẾM:" textFill="#212121">
+                     <font>
+                        <Font name="Tahoma Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <TableView fx:id="TableVFaculty" prefHeight="200.0" prefWidth="200.0" stylesheets="@../../CSS/stylesheet.css" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colFacultyCode" prefWidth="150.0" text="Mã khoa" />
+          <TableColumn fx:id="colFacultyName" minWidth="0.0" prefWidth="250.0" text="Tên khoa" />
+            <TableColumn fx:id="colButton" prefWidth="139.0" text="Cập nhật" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
